@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #202020;
+}
+main{
+  width: 80vw;
+  margin-left: 20%;
+}
+ul,
+ol,
+li {
+  text-decoration: none;
+  display: inline-block;
+}
+hr{
+  opacity: .1;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+.bannerImg img{
+  width: 70vw;
+}
+.titleTime{
+  color: #F3F4F6;
+  line-height: 4em;
+}
+.titleTime h3{
+  font-size: 2em;
+}
+.titleTime p{
+  font-size: 1.2em;
+  text-align: center;
+}
+.textTime{
+  color:#F3F4F6;
+  padding: 0 15%;
+  text-align: center;
+  line-height: 1.5em;
+  font-size: 1.4em;
+}
