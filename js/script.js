@@ -57,4 +57,10 @@ function differenceBetweenDates(date1, date2){
   return {years, months, days, hours, minutes, seconds};
 }
 
+function loadPage(){
+  window.location.href = 'home.html';
+  calculateTimeTogether();
+  console.log(calculateTimeTogether());
+}
+
 
