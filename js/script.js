@@ -18,8 +18,17 @@ function calculateTimeTogether() {
   intervalSeconds = setInterval(() => {
     const now = new Date();
     const result = differenceBetweenDates(dateSelected, now);
+    let textYears = 'ano';
+    let textMonths = 'mês';
+    let textDays = 'dia';
 
-    texto.innerHTML = `${result.years} anos, ${result.months} meses, ${result.days} dias, ${result.hours} horas, ${result.minutes} minutos, ${result.seconds} segundos`;
+    if(result.years > 1) textYears = 'anos';
+
+    if(result.months > 1) textMonths = 'meses';
+    
+    if(result.days > 1) textDays = 'dias';
+
+    texto.innerHTML = `${result.years} ${textYears}, ${result.months} ${textMonths}, ${result.days} ${textDays}, ${result.hours} horas, ${result.minutes} minutos, ${result.seconds} segundos`;
   }, 1000);
 }
 
@@ -58,5 +67,3 @@ function differenceBetweenDates(date1, date2){
 }
 
 calculateTimeTogether();
-
-

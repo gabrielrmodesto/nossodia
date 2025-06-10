@@ -36,10 +36,12 @@ a:hover {
 }
 .titleTime{
   color: #F3F4F6;
-  line-height: 4em;
+  padding: 5% 0;
 }
 .titleTime h3{
   font-size: 2em;
+  text-align: center;
+  padding-bottom: 3%;
 }
 .titleTime p{
   font-size: 1.2em;
