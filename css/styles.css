@@ -31,6 +31,31 @@ a:hover {
   text-decoration: none;
   color: inherit;
 }
+#bodyIndex{
+  height: 100vh;
+}
+.sectionCentral{
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+.sectionCentral p {
+  font-size: 2em;
+  color: #f0f0f0;
+  font-weight: 900;
+  text-align: center;
+  margin: 5% 0;
+}
+#btnLetsGo{
+  margin-top: 20px;
+  padding: 3% 7%;
+  font-size: 1.2em;
+  font-weight: 900;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  cursor: pointer;
+  border-radius: 10px;
+  color: #202020;
+}
 .bannerImg img{
   width: 70vw;
 }
@@ -49,8 +74,13 @@ a:hover {
 }
 .textTime{
   color:#F3F4F6;
-  padding: 0 15%;
+  padding: 0 10%;
   text-align: center;
   line-height: 1.5em;
   font-size: 1.4em;
+}
+@media screen and (max-width: 700px) {
+  .titleTime p{
+    padding: 0 3%;
+  }
 }

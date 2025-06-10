@@ -66,4 +66,8 @@ function differenceBetweenDates(date1, date2){
   return {years, months, days, hours, minutes, seconds};
 }
 
+function loadNossaHistoria(){
+  window.location.href = 'home.html';
+}
+
 calculateTimeTogether();
