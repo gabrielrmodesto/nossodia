@@ -1,15 +1,12 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html{
   scroll-behavior: smooth;
 }
 body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   font-family: sans-serif;
   background-color: #202020;
 }
@@ -56,46 +53,16 @@ a:hover {
   border-radius: 10px;
   color: #202020;
 }
-.carousel-container {
-    width: 100%;
-    max-width: 500px;   /* largura máxima do carrossel */
-    height: 600px;       /* altura visível do carrossel */
-    background: #000;    /* fundo para imagens com bordas */
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 10px;
-  }
-
-  .carousel-track {
-    display: flex;
-    width: 300%;
-    animation: slide 19s infinite;
-  }
-
-  .carousel-slide {
-    flex: 0 0 100%;
-  }
-
-  .carousel-slide img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    display: block;
-  }
-
-  @keyframes slide {
-    0% { transform: translateX(0%); }
-    33.33% { transform: translateX(-100%); }
-    66.66% { transform: translateX(-200%); }
-    100% { transform: translateX(0%); }
-  }
+.pageText{
+  position: relative;
+  top: 800px;
+}
 .titleTime{
   color: #F3F4F6;
   padding: 5% 0;
 }
 .titleTime h3{
-  font-size: 2em;
+  font-size: 2.4em;
   text-align: center;
   padding-bottom: 3%;
 }
@@ -108,13 +75,133 @@ a:hover {
   padding: 0 10%;
   text-align: center;
   line-height: 1.5em;
-  font-size: 1.4em;
+  font-size: 1.1em;
 }
-@media screen and (max-width: 700px) {
+.container{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider{
+  position: absolute;
+  inset: 80px 200px 80px 80px;
+  background: #ccc;
+  border-radius: 20px;
+}
+.slider .slides{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: 320px;
+  background: var(--img);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 25px 50px rgba(0,0,0,.4);
+}
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 25px 50px rgba(0,0,0,0);
+  background-size: cover;
+}
+.slider .slides:nth-child(3){
+  left: calc(50% + 240px);
+  background-size: cover;
+}
+.slider .slides:nth-child(4){
+  left: calc(50% + 500px);
+  background-size: cover;
+}
+.slider .slides:nth-child(5){
+  left: calc(50% + 760px);
+  background-size: cover;
+}
+.slider .slides:nth-child(6){
+  left: calc(50% + 1020px);
+  background-size: cover;
+  opacity: 0;
+}
+.buttons{
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  gap: 20px;
+}
+.buttons span{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #111;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.buttons span::before{
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  transform: rotate(315deg) translate(2px,2px);
+}
+.buttons span:nth-child(2):before{
+  transform: rotate(135deg) translate(2px,2px);
+}
+.buttons span:active{
+  opacity: .5;
+}
+@media (max-width: 900px) {
   .titleTime p{
     padding: 0 3%;
   }
   .carousel-container{
     max-width: 300px;
+  }
+  .slider{
+    position: absolute;
+    inset: 40px 40px 200px 40px;
+  }
+  .slider .slides{
+    width: 100px;
+    height: 100px;
+    top: initial;
+    bottom: -170px;
+    box-shadow: 0 25px 50px rgba(0,0,0,.5);
+  }
+  .slider .slides:nth-child(1),
+  .slider .slides:nth-child(2){
+    top: initial;
+    bottom: 0px;
+  }
+  /* left 0 */
+  .slider .slides:nth-child(3){
+    left: -15px;
+  }
+  /* 120 */
+  .slider .slides:nth-child(4){
+    left: 105px;
+  }
+  /* 240 */
+  .slider .slides:nth-child(5){
+    left: 225px;
+  }
+  /* 360 */
+  .slider .slides:nth-child(6){
+    left: 345px;
   }
 }
