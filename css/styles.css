@@ -73,7 +73,7 @@ a:hover {
 .textTime {
   color: #f3f4f6;
   padding: 0 10%;
-  text-align: center;
+  text-align: justify;
   line-height: 1.5em;
   font-size: 1.1em;
 }
@@ -166,6 +166,12 @@ a:hover {
   opacity: 0.5;
 }
 @media (max-width: 900px) {
+  .titleTime p {
+    line-height: 1.7em;
+  }
+  .textTime {
+    line-height: 1.75em;
+  }
   .buttons {
     bottom: auto;
     gap: 250px;
