@@ -99,7 +99,7 @@ a:hover {
   transform: translateY(-50%);
   width: 240px;
   height: 320px;
-  background: var(--img);
+  background-image: var(--img);
   background-size: cover;
   background-position: center;
   border-radius: 20px;
